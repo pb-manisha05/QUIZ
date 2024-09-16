@@ -1,0 +1,203 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(104, 40, 104);
+}
+
+.quiz-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: black;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px;
+    border: 1px solid #0e0e0e;
+    border-radius: 4px;
+}
+
+/* styles.css */
+
+
+/*.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}*/
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.incorrect {
+    background-color: red;
+    color: white;
+}
+.question-summary {
+    margin-bottom: 20px;
+}
+
+
+/* Remove default browser styling for buttons */
+/* General button styles */
+button {
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 15px; /* Spacing inside the button */
+    border-radius: 4px; /* Rounded corners */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    display: inline-block; /* Align buttons in a row */
+    margin: 5px; /* Spacing between buttons */
+}
+
+/* Start, Next, and Submit buttons */
+button.control {
+    background-color: rgb(104, 40, 104); /* Green background */
+    color: white; /* White text color */
+}
+
+button.control:hover {
+    background-color: rgb(53, 30, 50); /* Darker green on hover */
+}
+
+/* Option buttons */
+button.option {
+    background-color: transparent; /* Transparent background */
+    border: 1px solid #ccc; /* Light border */
+    color: black; /* Black text color */
+}
+
+/*button.option:hover {
+    background-color: #f0f0f0; 
+}*/
+
+/* Styles for correct and incorrect answers */
+
+button.correct {
+    background-color: green; 
+    font-weight: bold;
+    color: #fff;
+}
+
+button.incorrect {
+    background-color: red; 
+    font-weight: bold;
+    color: #fff;
+}
+
+.option {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.option.correct {
+    background-color: green;
+    color: white;
+}
+
+.option.incorrect {
+    background-color: red;
+    color: white;
+}
+
+.option.selected {
+    border: 2px solid #000;
+}
+
+#submitButton {
+    background-color: rgb(104, 40, 104);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submitButton:hover {
+    background-color: rgb(53, 30, 50);
+}
+
+#resetButton {
+    background-color: rgb(104, 40, 104);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+#resetButton:hover {
+    background-color: rgb(53, 30, 50);
+}
+#downloadButton{
+    background-color: rgb(104, 40, 104);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+#downloadButton:hover {
+    background-color: rgb(53, 30, 50);
+}
+#timer {
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    .quiz-container {
+       
+        width: 100%;
+        padding: 10px;
+    }
+    /*.quiz-container {
+        padding: 10px;
+    }*/
+
+    button {
+        width: 380px;
+       
+    }
+    input[type="text"], textarea, select {
+        width: 360px;
+        
+    }
+}
+

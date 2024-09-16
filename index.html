@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!---<div id="intro">
+            <h1>Welcome to the Quiz!</h1>
+            <form id="user-info-form" onsubmit="return validateFeedback()"></form>
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" required>
+                <label for="contact">Enter your email ID or Instagram username:</label>
+                <input type="text" id="contact" required>
+                <button class="control" onclick="startQuiz()">Start</button>
+            </form>
+        </div>--->
+
+        <div id="intro">
+            <h1>Welcome to the Quiz!</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+    
+            <label for="contact">Contact (Email or Instagram):</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter your email or Instagram username">
+    
+            <button id="startButton" class="control" onclick="submitForm()" onclick="validateAndStartQuiz()">Start</button>
+            <button id="downloadButton" onclick="document.location='https://drive.google.com/drive/folders/1hDHcd_7K7g1R9O7DdRkRPYHNnDTP1Fzb?usp=sharing '">Download</button>
+        </div>
+        
+        <div id="quiz" style="display:none;">
+            <div id="question"></div>
+            <div id="answers"></div>
+            <div id="timer">Time left: 30s</div>
+<div id="question"></div>
+
+            <button id="nextButton" class="control" >Next</button>
+            
+        </div>
+        
+        
+
+        <div id="result" style="display: none;">
+            <h2 id="result-message"></h2> <!-- Will display 'Congratulations' or 'Thank you for participating' -->
+            
+            <div id="feedback-section">
+                <h3>We value your Suggestions!</h3>
+        
+                <!-- Suggestion Box -->
+                <label for="feedback">Suggestions:</label>
+                <textarea id="feedback" placeholder="Enter your suggestions" oninput="checkFeedbackAndRating()"></textarea>
+                
+                <!-- Rating Dropdown -->
+                <label for="rating">Rate us:</label>
+                <select id="rating" onchange="checkFeedbackAndRating()">
+                    <option value="">Rate us</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+        
+                <!-- Submit Button -->
+                <button id="submitButton" onclick="submitForm()">Submit</button>
+                <button id="resetButton">Reset</button>
+                <button id="downloadButton" onclick="document.location='https://drive.google.com/drive/folders/1hDHcd_7K7g1R9O7DdRkRPYHNnDTP1Fzb?usp=sharing '">Learn</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
